@@ -1,0 +1,59 @@
+.slider h3,
+.slider h5,
+.clients h3 {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+h6 {
+    color: black;
+}
+
+span {
+    color: white;
+}
+
+img {
+    padding-top: 10px;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.parallax-container {
+    height: 1500px;
+}
+
+.parallax-login {
+    height: 600px;
+}
+
+.container-parallax {
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+.container-contact {
+    width: 400px;
+}
+
+.contact {
+    height: 600px;
+}
+
+.parallax img {
+    filter: grayscale(1);
+    opacity: 0.5 !important;
+}
+
+.clients img {
+    max-width: 150px;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.5));
+}
+
+section,
+footer {
+    padding: 10px 0;
+}

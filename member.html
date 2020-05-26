@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>b</title>
+</head>
+
+<body class="red">
+    <div class="navbar-fixed">
+        <nav class="grey darken-4 red">
+            <div class="nav-wrapper">
+                <img src="img/guild black bull (2).png" height="60">
+                <a href="#home" class="brand-logo center"><strong>Black Bull</strong></a>
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="admin.html">Edit Profile</a></li>
+                    <li><a href="#Job-List">Job List</a></li>
+                    <li><a href="index.html">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <ul class="sidenav" id="mobile-nav">
+        <li><a href="admin.html">Edit Profile</a></li>
+        <li><a href="#Job-List">Job List</a></li>
+        <li><a href="index.html">Log Out</a></li>
+    </ul>
+
+    <div class="scrollspy" id="home">
+        <div class="row" style="margin: 0;">
+            <div class="col s12">
+                <!-- Modal Structure -->
+                <div id="modal-edit" class="modal">
+                    <div class="modal-content" style="text-align:center;">
+                        <h4>Edit Profile</h4>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="input-field">
+                                    <input placeholder="New Full Name" id="fullname-new" type="text" class="validate">
+                                    <label for="fullname-new">New Full Name</label>
+                                </div>
+                                <div class="input-field">
+                                    <input placeholder="New Address" id="address-new" type="text" class="validate">
+                                    <label for="address-new">New Address</label>
+                                </div>
+                                <div class="input-field">
+                                    <input placeholder="New Phone" id="phone-new" type="text" class="validate">
+                                    <label for="phone-new">New Phone</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align:center; margin-bottom: 15px;">
+                        <a class="modal-close waves-effect waves-green btn">Cancel</a>
+                        <a class="modal-close waves-effect waves-green btn">Submit</a>
+                    </div>
+                </div>
+
+                <div id="modal-form" class="modal black">
+                    <div class="modal-content" style="text-align:center;">
+                        <h4>Upgrade Rank Form</h4>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="input-field">
+                                    <input placeholder="Full Name" id="fullname-form" type="text" class="validate">
+                                    <label for="fullname-form">Full Name</label>
+                                </div>
+                                <div class="input-field">
+                                    <input placeholder="Email" id="email-form" type="email" class="validate">
+                                    <label for="email-form">E-mail</label>
+                                </div>
+                                <div class="input-field">
+                                    <textarea id="message" class="materialize-textarea"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align:center; margin-bottom: 15px;">
+                        <a class="modal-close waves-effect waves-green btn">Cancel</a>
+                        <a class="modal-close waves-effect waves-green btn">Submit</a>
+                    </div>
+                </div>
+
+                <div id="modal-job" class="modal">
+                    <div class="modal-content" style="text-align:center;">
+                        <h4>New Job</h4>
+                        <div class="row">
+                            <div class="col s12">
+                                <div class="input-field">
+                                    <input placeholder="Job Title" id="job-title" type="text" class="validate">
+                                    <label for="job-title">Job Title</label>
+                                </div>
+                                <div class="input-field">
+                                    <input placeholder="Job Description" id="job-description" type="email" class="validate">
+                                    <label for="job-description">Job Description</label>
+                                </div>
+                                <div class="input-field">
+                                    <input placeholder="5" id="job-reward" type="number" class="validate">
+                                    <label for="job-reward">Job Reward </label>
+                                </div>
+                                <div style="text-align: left;">
+                                    <label>Job Required Rank</label>
+                                    <select id="job-rank" name="job-rank" class="browser-default" style="margin-top: 5px;">
+                        <option value="Iron" selected>Iron</option>
+                        <option value="Silver">Silver</option>
+                        <option value="Gold">Gold</option>
+                        <option value="Platinum">Platinum</option>
+                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align:center; margin-bottom: 15px;">
+                        <a class="modal-close waves-effect waves-green btn">Cancel</a>
+                        <a class="modal-close waves-effect waves-green btn">Submit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="edit-profile center-block" style="padding-bottom: 20px; margin-top: 20px; width: 500px;">
+            <div class="col s12 m4 offset-m1">
+                <div class="card" style="border-radius: 0px;">
+                    <div class="card-image black">
+                        <img src="img/10.jpg" style="width: 200px; margin: auto;" class="circle">
+                        <!-- <span class="card-title">Card Title</span> -->
+                        <a data-target="modal-edit" class="btn-floating halfway-fab waves-effect waves-light red modal-trigger"><i class="material-icons">edit</i></a>
+                    </div>
+                    <div class="card-content font-fira black white-text">
+                        <p style="font-weight: bold; text-align: center;">Administrator</p>
+                        <p id="username">Username: Ricardo</p>
+                        <p id="name-2">Name: Ricardo Milos</p>
+                        <p id="nik">email: Ricardo@gmail.com</p>
+                        <p id="address">Rank: Platinum</p>
+                        <p id="phone">Point: 10000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row blue darken-4">
+        <div class="col s12 center-align " style="position:relative;">
+            <div class="row">
+                <h2 id="Job-List">Job List</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row scrollspy blue darken-4" id="jobs">
+        <div class="col s12 m3">
+            <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                    <span class="card-title center-align" style="font-size: 22px;">Kill 10 Enemy</span>
+                    <p style="font-family: Georgia; opacity: 80%;">Kill 10 enemy heroes who are in Penalty Zone in total.</p>
+                    <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Platinum</span></p>
+                    <p>Prize: <span style="color: yellow;">500</span></p>
+                    <p>Issuer: <span style="color: yellow;">ricardo</span></p>
+                    <p>Time limit: <span style="color: yellow;">24 hours</span></p>
+                    <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m3">
+            <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                    <span class="card-title center-align" style="font-size: 22px;">Solidarity</span>
+                    <p style="font-family: Georgia; opacity: 80%;">Team up with me and win 2 matches. Fight them all</p>
+                    <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Gold</span></p>
+                    <p>Prize: <span style="color: yellow;">100</span></p>
+                    <p>Issuer: <span style="color: yellow;">BillyH</span></p>
+                    <p>Time limit: <span style="color: yellow;">5 hours</span></p>
+                    <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m3">
+            <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                    <span class="card-title center-align" style="font-size: 22px;">Defeat Invaders</span>
+                    <p style="font-family: Georgia; opacity: 80%;">Use enhanced basic attacks gained from the Passive.</p>
+                    <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Silver</span></p>
+                    <p>Prize: <span style="color: yellow;">299</span></p>
+                    <p>Issuer: <span style="color: yellow;">DannyL</span></p>
+                    <p>Time limit: <span style="color: yellow;">8 hours</span></p>
+                    <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m3">
+            <div class="card green darken-2 z-depth-3">
+                <div class="card-content white-text font-fira">
+                    <span class="card-title center-align" style="font-size: 22px;">Defend Invasion</span>
+                    <p style="font-family: Georgia; opacity: 80%;">Win a match while the First Blood is achieved by the enemy team.</p>
+                    <p style="margin-top: 10px;">Rank required: <span style="color: yellow;">Iron</span></p>
+                    <p>Prize: <span style="color: yellow;">300</span></p>
+                    <p>Issuer: <span style="color: yellow;">BernardM</span></p>
+                    <p>Time limit: <span style="color: yellow;">12 hours</span></p>
+                    <span class="button-take" style="display: block; margin: 0px 15px; margin-top: 15px;">Take</span>
+                </div>
+            </div>
+        </div>
+
+        <ul class="pagination">
+            <li class="disabled"><a href="#!"><span style="color: white;"><i class="material-icons">chevron_left</i></span></a></li>
+            <li class="active"><a href="#!">1</a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">2</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">3</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">4</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;">5</span></a></li>
+            <li class="waves-effect"><a href="#!"><span style="color: white;"><i class="material-icons">chevron_right</i></span></a></li>
+        </ul>
+    </div>
+
+    <footer class="grey darken-4 white-text center">
+        <p>Black Bull, Copyright 2020.</p>
+    </footer>
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
